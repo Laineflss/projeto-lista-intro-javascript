@@ -81,12 +81,16 @@ return stringMaiusculo
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
   // implemente sua lógica aqui
+const vendaDeIngressosComLucro = custo / valorIngresso
+return vendaDeIngressosComLucro
 
 }
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
   // implemente sua lógica aqui
+return string1.length === string2.length;
+
 
 }
 
@@ -117,23 +121,40 @@ function trocaPrimeiroEUltimo(array) {
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
-
+return string1.toLowerCase() === string2.toLowerCase()? true : false;
 }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
-  // implemente sua lógica aqui
-
+  // implemente sua lógica aqui  
+    const anoAtual = Number(prompt("Digite o ano atual:"));
+    const anoNascimento = Number(prompt("Digite o ano de seu nascimento:"));
+    const anoEmissaoRG = Number(prompt("Digite o ano de emissão de seu RG:"));
+    const idadeAtual = anoAtual - anoNascimento;
+    const tempoDeEmissao = anoAtual - anoEmissaoRG;
+  
+    const precisaRenovar = 
+      (idadeAtual <= 20 && tempoDeEmissao >= 5) ||
+      (idadeAtual > 20 && idadeAtual <= 50 && tempoDeEmissao >= 10) ||
+      (idadeAtual > 50 && tempoDeEmissao >= 15);
+      
+    console.log(precisaRenovar);
+  
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
+  verifica1 = ano % 400 === 0
+  verifica2 = ano % 4 === 0 && ano % 100 !== 0
+  return verifica1 || verifica2
 
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
-
+  // implemente sua lógica aqui  
+   
+    
+  
 }
